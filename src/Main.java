@@ -8,18 +8,18 @@ public class Main {
         string = string.replace("—", "");
         string = string.replace(":", "");
         string = string.replace("!", "");
-        char[] chars = string.toCharArray();
-        int j = string.length() - 1;
-        boolean isPalindrom = true;
+        char[] array = string.toCharArray();
+        int j = array.length - 1;
+        boolean isPalindrome = true;
         for (int i = 0; i < string.length(); i++) {
-            if (chars[i] == chars[j]) {
+            if (array[i] == array[j]) {
                 j--;
             } else {
-                isPalindrom = false;
+                isPalindrome = false;
                 break;
             }
         }
-        if (isPalindrom) {
+        if (isPalindrome) {
             System.out.println("Строка является палиндромом");
         } else {
             System.out.println("Строка не является палиндромом");
